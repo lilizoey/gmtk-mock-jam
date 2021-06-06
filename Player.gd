@@ -18,6 +18,6 @@ func _process(delta):
 	if Input.is_action_pressed("move_right"):
 		move_vec += Vector2.RIGHT
 	
-	move_and_slide(move_vec * move_speed * Constants.TILE_WIDTH)
+	move_and_slide(move_vec.normalized() * move_speed * Constants.TILE_WIDTH)
 	
 	rotation = Vector2.UP.angle_to(get_global_mouse_position() - global_position)
