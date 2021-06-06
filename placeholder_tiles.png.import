@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/light_sphere.png-b1863adbee574bec43985ee4d541a325.stex"
+path="res://.import/placeholder_tiles.png-45960d152ff3660835758cb5152f80c6.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://light_sphere.png"
-dest_files=[ "res://.import/light_sphere.png-b1863adbee574bec43985ee4d541a325.stex" ]
+source_file="res://placeholder_tiles.png"
+dest_files=[ "res://.import/placeholder_tiles.png-45960d152ff3660835758cb5152f80c6.stex" ]
 
 [params]
 
