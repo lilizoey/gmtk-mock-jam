@@ -1,4 +1,4 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://Player.gd" type="Script" id=1]
 [ext_resource path="res://icon.png" type="Texture" id=2]
@@ -7,6 +7,10 @@
 
 [sub_resource type="CircleShape2D" id=1]
 radius = 11.5
+
+[sub_resource type="Curve" id=2]
+max_value = 48.0
+_data = [ Vector2( 0, 0 ), 0.0, 0.0, 0, 0, Vector2( 0.555324, 17.0182 ), 73.1564, 73.1564, 0, 0, Vector2( 1, 47.5636 ), 2.15482, 0.0, 0, 0 ]
 
 [node name="Player" type="KinematicBody2D" groups=[
 "Player",
@@ -31,6 +35,8 @@ texture = ExtResource( 2 )
 
 [node name="Position2D" type="Position2D" parent="."]
 script = ExtResource( 4 )
+stretch_curve = SubResource( 2 )
+max_range = 160.0
 
 [node name="Camera2D" type="Camera2D" parent="Position2D"]
 current = true
