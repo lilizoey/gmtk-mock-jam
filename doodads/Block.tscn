@@ -5,7 +5,7 @@ load_path = "res://.import/wall_tiles.png-990794ff1bc9e0f145c419af881fd338.stex"
 
 [sub_resource type="AtlasTexture" id=2]
 atlas = SubResource( 1 )
-region = Rect2( 57, 43, 5, 5 )
+region = Rect2( 105, 43, 6, 6 )
 
 [node name="Block" type="Sprite"]
 texture = SubResource( 2 )

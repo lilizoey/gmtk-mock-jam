@@ -70,7 +70,7 @@ func wander(delta):
 	
 
 func start_chase():
-	state = states.idle
+	state = states.chase
 
 func chase(delta):
 	current_direction = (player.global_position - global_position).normalized()

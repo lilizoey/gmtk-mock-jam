@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=2]
+[gd_scene load_steps=19 format=2]
 
 [ext_resource path="res://player/Player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Tileset.tres" type="TileSet" id=2]
@@ -10,6 +10,7 @@
 [ext_resource path="res://misc/Breath.gd" type="Script" id=8]
 [ext_resource path="res://misc/Music.tscn" type="PackedScene" id=9]
 [ext_resource path="res://assets/breath1.mp3" type="AudioStream" id=10]
+[ext_resource path="res://doodads/Dripper.tscn" type="PackedScene" id=11]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 20, 9 )
@@ -35,7 +36,6 @@ extents = Vector2( 10, 33 )
 [node name="World" type="Node2D"]
 
 [node name="CanvasModulate" type="CanvasModulate" parent="."]
-visible = false
 color = Color( 0.1, 0.1, 0.1, 1 )
 
 [node name="TileMap" type="TileMap" parent="."]
@@ -78,32 +78,43 @@ position = Vector2( 420, 336 )
 position = Vector2( 0, 12 )
 shape = SubResource( 7 )
 
-[node name="Paper" parent="TileMap" instance=ExtResource( 7 )]
-position = Vector2( 50.1365, 107.092 )
+[node name="Debris" type="Node2D" parent="TileMap"]
 
-[node name="Paper2" parent="TileMap" instance=ExtResource( 7 )]
-position = Vector2( 210.75, 141.25 )
+[node name="Paper" parent="TileMap/Debris" instance=ExtResource( 7 )]
+position = Vector2( 50, 107 )
 
-[node name="Paper3" parent="TileMap" instance=ExtResource( 7 )]
-position = Vector2( 203.599, 137.807 )
+[node name="Paper2" parent="TileMap/Debris" instance=ExtResource( 7 )]
+position = Vector2( 210, 141 )
 
-[node name="Paper4" parent="TileMap" instance=ExtResource( 7 )]
-position = Vector2( 212.75, 131.715 )
+[node name="Paper3" parent="TileMap/Debris" instance=ExtResource( 7 )]
+position = Vector2( 203, 137 )
 
-[node name="Paper5" parent="TileMap" instance=ExtResource( 7 )]
-position = Vector2( 206.658, 132.245 )
+[node name="Paper4" parent="TileMap/Debris" instance=ExtResource( 7 )]
+position = Vector2( 212, 131 )
 
-[node name="Paper6" parent="TileMap" instance=ExtResource( 7 )]
-position = Vector2( 209.837, 135.953 )
+[node name="Paper5" parent="TileMap/Debris" instance=ExtResource( 7 )]
+position = Vector2( 206, 132 )
 
-[node name="Paper7" parent="TileMap" instance=ExtResource( 7 )]
-position = Vector2( 212.75, 139.396 )
+[node name="Paper6" parent="TileMap/Debris" instance=ExtResource( 7 )]
+position = Vector2( 209, 135 )
 
-[node name="Paper8" parent="TileMap" instance=ExtResource( 7 )]
-position = Vector2( 214.869, 133.569 )
+[node name="Paper7" parent="TileMap/Debris" instance=ExtResource( 7 )]
+position = Vector2( 212, 139 )
 
-[node name="Paper9" parent="TileMap" instance=ExtResource( 7 )]
-position = Vector2( 47.5718, 105.073 )
+[node name="Paper8" parent="TileMap/Debris" instance=ExtResource( 7 )]
+position = Vector2( 214, 133 )
+
+[node name="Paper9" parent="TileMap/Debris" instance=ExtResource( 7 )]
+position = Vector2( 47, 105 )
+
+[node name="Dripper" parent="TileMap/Debris" instance=ExtResource( 11 )]
+position = Vector2( -713.065, 111.409 )
+
+[node name="Dripper2" parent="TileMap/Debris" instance=ExtResource( 11 )]
+position = Vector2( -603.59, -1340.08 )
+
+[node name="Dripper3" parent="TileMap/Debris" instance=ExtResource( 11 )]
+position = Vector2( 185.632, -157.84 )
 
 [node name="Block" parent="TileMap" instance=ExtResource( 6 )]
 position = Vector2( 76.5088, 139.265 )
@@ -113,6 +124,12 @@ position = Vector2( 125, 97 )
 
 [node name="Enemy" parent="." instance=ExtResource( 3 )]
 position = Vector2( 176.5, 236 )
+
+[node name="Enemy2" parent="." instance=ExtResource( 3 )]
+position = Vector2( 117.277, 848.795 )
+
+[node name="Enemy3" parent="." instance=ExtResource( 3 )]
+position = Vector2( 1007.82, 494.339 )
 
 [node name="Music" parent="." instance=ExtResource( 9 )]
 

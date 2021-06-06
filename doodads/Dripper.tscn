@@ -4,6 +4,8 @@
 
 [node name="Dripper" type="AudioStreamPlayer2D"]
 stream = ExtResource( 1 )
-volume_db = 5.0
+volume_db = 2.0
 autoplay = true
+max_distance = 1500.0
+attenuation = 3.36359
 bus = "Sound Effects"
