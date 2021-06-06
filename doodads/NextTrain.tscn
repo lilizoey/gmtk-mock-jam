@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://assets/the_next_train.ogg" type="AudioStream" id=1]
+[ext_resource path="res://doodads/Random.gd" type="Script" id=2]
+
+[node name="TheNextTrain" type="AudioStreamPlayer2D"]
+stream = ExtResource( 1 )
+volume_db = 2.0
+autoplay = true
+max_distance = 1500.0
+attenuation = 3.36359
+bus = "Sound Effects"
+script = ExtResource( 2 )
