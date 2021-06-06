@@ -1,0 +1,64 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://PlayButton.gd" type="Script" id=1]
+
+[node name="DeathScreen" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+rect_pivot_offset = Vector2( -39.9787, -102.427 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureRect" type="TextureRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CenterContainer" type="CenterContainer" parent="TextureRect"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="TextureRect/CenterContainer"]
+margin_left = 90.0
+margin_top = 30.0
+margin_right = 230.0
+margin_bottom = 150.0
+rect_min_size = Vector2( 140, 120 )
+
+[node name="Label" type="Label" parent="TextureRect/CenterContainer/VBoxContainer"]
+margin_right = 140.0
+margin_bottom = 14.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+text = "you died :c"
+align = 1
+valign = 1
+
+[node name="Control" type="Control" parent="TextureRect/CenterContainer/VBoxContainer"]
+margin_top = 18.0
+margin_right = 140.0
+margin_bottom = 55.0
+size_flags_vertical = 3
+size_flags_stretch_ratio = 2.5
+
+[node name="ReturnMainMenu" type="Button" parent="TextureRect/CenterContainer/VBoxContainer"]
+margin_top = 59.0
+margin_right = 140.0
+margin_bottom = 79.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+text = "Main Menu"
+script = ExtResource( 1 )
+scene = "res://MainMenu.tscn"
+
+[node name="Control2" type="Control" parent="TextureRect/CenterContainer/VBoxContainer"]
+margin_top = 83.0
+margin_right = 140.0
+margin_bottom = 120.0
+size_flags_vertical = 3
+size_flags_stretch_ratio = 2.5
+
+[connection signal="pressed" from="TextureRect/CenterContainer/VBoxContainer/ReturnMainMenu" to="TextureRect/CenterContainer/VBoxContainer/ReturnMainMenu" method="_on_pressed"]

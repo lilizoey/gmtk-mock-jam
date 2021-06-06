@@ -26,7 +26,6 @@ func _process(delta):
 	timer -= delta
 
 func _physics_process(delta):
-	print(state)
 	match state:
 		states.wander:
 			wander(delta)
@@ -86,12 +85,10 @@ func chase_prepare(delta):
 	
 
 func _on_player_spotted(player):
-	print("player spotted")
 	self.player = player
 	start_chase_prepare()
 	can_see_player = true
 
 func _on_lost_player():
-	print("player lost")
 	start_idle()
 	can_see_player = false

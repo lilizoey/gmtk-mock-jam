@@ -1,0 +1,67 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://PlayButton.gd" type="Script" id=1]
+[ext_resource path="res://ExitButton.gd" type="Script" id=2]
+
+[node name="Control" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureRect" type="TextureRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CenterContainer" type="CenterContainer" parent="TextureRect"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="TextureRect/CenterContainer"]
+margin_left = 90.0
+margin_top = 30.0
+margin_right = 230.0
+margin_bottom = 150.0
+rect_min_size = Vector2( 140, 120 )
+
+[node name="Label" type="Label" parent="TextureRect/CenterContainer/VBoxContainer"]
+margin_right = 140.0
+margin_bottom = 19.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+text = "euuuh"
+align = 1
+valign = 1
+
+[node name="Control" type="Control" parent="TextureRect/CenterContainer/VBoxContainer"]
+margin_top = 23.0
+margin_right = 140.0
+margin_bottom = 72.0
+size_flags_vertical = 3
+size_flags_stretch_ratio = 2.5
+
+[node name="PlayButton" type="Button" parent="TextureRect/CenterContainer/VBoxContainer"]
+margin_top = 76.0
+margin_right = 140.0
+margin_bottom = 96.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+text = "Play"
+script = ExtResource( 1 )
+scene = "res://World.tscn"
+
+[node name="ExitButton" type="Button" parent="TextureRect/CenterContainer/VBoxContainer"]
+margin_top = 100.0
+margin_right = 140.0
+margin_bottom = 120.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+text = "Exit"
+script = ExtResource( 2 )
+
+[connection signal="pressed" from="TextureRect/CenterContainer/VBoxContainer/PlayButton" to="TextureRect/CenterContainer/VBoxContainer/PlayButton" method="_on_pressed"]
+[connection signal="pressed" from="TextureRect/CenterContainer/VBoxContainer/ExitButton" to="TextureRect/CenterContainer/VBoxContainer/ExitButton" method="_on_pressed"]
