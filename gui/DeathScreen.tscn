@@ -22,10 +22,10 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 
 [node name="VBoxContainer" type="VBoxContainer" parent="TextureRect/CenterContainer"]
-margin_left = 90.0
-margin_top = 30.0
-margin_right = 230.0
-margin_bottom = 150.0
+margin_left = 122.0
+margin_top = 48.0
+margin_right = 262.0
+margin_bottom = 168.0
 rect_min_size = Vector2( 140, 120 )
 
 [node name="Label" type="Label" parent="TextureRect/CenterContainer/VBoxContainer"]
@@ -52,7 +52,7 @@ size_flags_horizontal = 3
 size_flags_vertical = 3
 text = "Main Menu"
 script = ExtResource( 1 )
-scene = "res://MainMenu.tscn"
+scene = "res://gui/MainMenu.tscn"
 
 [node name="Control2" type="Control" parent="TextureRect/CenterContainer/VBoxContainer"]
 margin_top = 83.0

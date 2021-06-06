@@ -20,10 +20,10 @@ Constants="*res://Constants.gd"
 
 [display]
 
-window/size/width=320
-window/size/height=180
-window/size/test_width=960
-window/size/test_height=540
+window/size/width=384
+window/size/height=216
+window/size/test_width=1152
+window/size/test_height=648
 window/stretch/mode="viewport"
 window/stretch/aspect="keep"
 

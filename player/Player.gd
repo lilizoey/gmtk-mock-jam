@@ -2,6 +2,8 @@ extends KinematicBody2D
 
 export var move_speed := 4
 
+onready var step := $Step
+
 func _ready():
 	pass
 
@@ -17,6 +19,8 @@ func _process(delta):
 		move_vec += Vector2.LEFT
 	if Input.is_action_pressed("move_right"):
 		move_vec += Vector2.RIGHT
+	
+	step.playing = move_vec.length() > 0.05
 	
 	move_and_slide(move_vec.normalized() * move_speed * Constants.TILE_WIDTH)
 	

@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/step2.mp3-bc4fa420ac859d73366a64af8cce9137.mp3str"
+
+[deps]
+
+source_file="res://assets/step2.mp3"
+dest_files=[ "res://.import/step2.mp3-bc4fa420ac859d73366a64af8cce9137.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

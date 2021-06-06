@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/cursed.mp3-21868d47009eeb64fa6373282d020505.mp3str"
+
+[deps]
+
+source_file="res://assets/cursed.mp3"
+dest_files=[ "res://.import/cursed.mp3-21868d47009eeb64fa6373282d020505.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0
