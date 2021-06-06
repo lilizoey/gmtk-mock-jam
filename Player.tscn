@@ -24,7 +24,7 @@ shape = SubResource( 1 )
 
 [node name="LightCone" type="Light2D" parent="."]
 texture = ExtResource( 3 )
-energy = 0.9
+energy = 0.85
 shadow_enabled = true
 shadow_filter = 1
 shadow_filter_smooth = 24.0

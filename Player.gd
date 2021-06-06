@@ -21,3 +21,6 @@ func _process(delta):
 	move_and_slide(move_vec.normalized() * move_speed * Constants.TILE_WIDTH)
 	
 	rotation = Vector2.UP.angle_to(get_global_mouse_position() - global_position)
+
+func die():
+	get_tree().change_scene("res://DeathScreen.tscn")

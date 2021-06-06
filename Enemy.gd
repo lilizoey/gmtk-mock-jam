@@ -41,6 +41,11 @@ func _physics_process(delta):
 		rotation += delta * PI  
 	elif angle_diff < -0.1:
 		rotation -= delta * PI 
+	
+	for i in get_slide_count():
+		var coll := get_slide_collision(i)
+		if coll.collider.is_in_group("Player"):
+			coll.collider.die()
 
 func start_wander():
 	state = states.wander
