@@ -11,5 +11,5 @@ dest_files=[ "res://.import/the_next_train.ogg-89c6c0907a16eb8de77996a6340d41bd.
 
 [params]
 
-loop=true
+loop=false
 loop_offset=0
